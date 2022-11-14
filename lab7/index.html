@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<h1 class="header__title">Калькулятор</h1>
+			</div>
+		</header>
+		<main class="main">
+			<section class="greeting">
+				<div class="greeting__container container">
+					<h3 class="greeting__text text">На этой странице можно произвести простейшие арифметические операции.
+						<br>Введите два операнда, выберите операцию и получите результат.</h3>
+				</div>
+			</section>
+			<section class="calculator">
+				<div class="calculator__container container">
+					<form id="calculator__form" class="calculator__form form" name="form">
+						<div class="calculator__operands">
+							<input type="text" id="first-operand" name="operand" placeholder="Первый операнд" required>
+							<p id="operation">+</p>
+							<input type="text" id="second-operand" name="operand" placeholder="Второй операнд" required>
+						</div>
+						<div class="calculator__operations">
+							<div class="operation-radio-button">
+								<input type="radio" id="sum" name="operation" value="+"  onchange="changeOperation(this)" checked>
+								<label for="sum" class="operation-label">+</label>
+							</div>
+							<div class="operation-radio-button">
+								<input type="radio" id="sub" name="operation" value="-"  onchange="changeOperation(this)">
+								<label for="sub" class="operation-label">-</label>
+							</div>
+							<div class="operation-radio-button">
+								<input type="radio" id="mul" name="operation" value="*"  onchange="changeOperation(this)">
+								<label for="mul" class="operation-label">*</label>
+							</div>
+							<div class="operation-radio-button">
+								<input type="radio" id="div" name="operation" value="/"  onchange="changeOperation(this)">
+								<label for="div" class="operation-label">/</label>
+							</div>
+						</div>
+						<input type="submit" class="calculator__submit" value="Получить результат">
+					</form>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="js/index.js"></script>
+
+</body>
+</html>
